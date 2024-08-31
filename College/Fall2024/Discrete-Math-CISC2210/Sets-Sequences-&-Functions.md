@@ -8,99 +8,70 @@ Topics covered:
 
 ## Set Notation
 
-![NPZ](assets/NPZ.png)
+| Symbol   |  Meaning  |
+|--------------- | --------------- |
+| $\mathbb{P}$  | Positive integers (zero exclusive) |
+| $\mathbb{N}$  | Natural numbers (zero inclusive) |
+| $\mathbb{Z}$  | Real numbers (positive, negative, or zero) |
+| $\mathbb{Q}$  | Quotient numbers (fractions) |
+| $\mathbb{R}$  | All numbers |
+| $\empty$  | Empty set |
 
-### N
-
-Refers to the set of all **natural numbers** (zero inclusive).
-
-### P
-
-Refers to the set of all **positive integers** (zero exclusive).
-
-### Z
-
-Refers to the set of all integers, (positive, zero or negative).
-
-### Q
-
-Refers to a set of rational numbers (a ratio of integers, or a fraction).
-
-### R
-
-Refers to a set of all real numbers; a combination of all of the above.
-
-### ∅
-
-Refers to an empty set.
-
-### Element-of ∈
-
-The element-of symbol is used to signify an object of a set. It can be read as "is an 
-element of." An ∈ with a strikethrough is usually the opposite, "is not an element of."
 
 ## Reading Set Notation
 
-![setnotation](assets/setnotation.png)
+### Element-of $\epsilon$
 
-**The : can be read as "such that" or "where".** 
-```
-{n : n E N and n is even}
-n where n is a natural number and n is even
-```
-
-![n2](assets/dummy.png)
-
-```
-(n^2 such that n is a natural number) =
-
-(m is an element of natural numbers such that m = n^2 for some of n
-being a natural number) =
-
-a set of (0, 1, 3, 9, 16, 25, 36, ...)
-```
+The element-of symbol is used to signify an object of a set. It can be read as "is an 
+element of." An $\epsilon$ with a strikethrough is usually the opposite, "is not an element of."
 
 ### General Sets and General Members of Sets
 
-Typically, generic sets are denoted by a capital letter, such as (*A, B, S
+**Generic sets** are denoted by a capital letter, such as (*A, B, S
 or X*).
 
-For elements of a set, a generic member in other words, is denoted using a the lowercase
-of corresponding set.
+The **generic members** of the set, the individual elements, are denoted via lowercase
+letters (*a, b, s, or x*).
 
-For example, s ∈ S or t ∈ T. 
+For example, s $\epsilon$ S or t $\epsilon$ T. 
 
-## Advanced Set Notation
+### (Improper) Subset $\subseteq$ 
 
-### Subset ⊆
+Consider $A \subseteq B$. This can simply be read as "A is a subset of B"
+> Note: Subset-of may also be read as "is contained in".
+> Also: This symbol is an IMPROPER subset, not a PROPER subset ($\subset$).
 
-The subset-of symbol ⊆ can simply be read as "A is a subset of B"
-> Subset-of may also be read as "is contained in".
-
-Consider S ⊆ T. Since s ∈ S, this implies that s ∈ T.
+Now consider $S \subseteq T$: Since $s \epsilon S$, this implies that $s \epsilon T$.
 
 ### Power Set
 
 The set of all subsets of a set of S is a power set and can be denoted as P(S).
-> You may think of a power set as an array within an array.
 
-Consider the following example to see how power sets work:
+The total size of a power set will generally be $2^n$ size.
 
 ![PowerSet](assets/PowerSet.png)
 
-In essence, power sets list out all the possibile combinations of any given set.
-And in point (d), if the finite set has n elements where n <= 3, there will
-be 2^n elements (or combinations) in the power set.
+### Sigma $\sum$
 
-### Sigma Σ
+Sigma sets can contain any combination of letters, numbers and symbols.
 
-Sigma sets aren't much different from generic sets, the idea is the same except instead of
-having numberic elements, sigma sets consist of **letters**.
+We could define the alphabet within $\sum$, such that
 
-One could define the alphabet within Σ, such that
+$\sum = {a, b, c, d, ... , z}$
 
-`Σ = {a, b, c, d, ... , z}`
+### Sigma Star $\sum*$
 
-### Sigma Star Σ*
+A "super set" of sigma, sigma star contains all combinations of a sigma set.
 
-Essentially, the super set of sigma (Σ), sigma star  
+Since there's an infinite number of ways to combine letters and symbols, sigma star
+is infinite in size.
+
+##### Lambda $\lambda$
+The first letter of sigma star, lambda simply represents an empty word.
+
+### Restrictions of Sigma
+
+Sigma sets are not allowed to contain elements of strings which **begin with the 
+same letter as an existing element**. 
+
+We can allow $\sum = {a, b, c}$, however we cannot allow $\sum = {a, b, c, cd}$
