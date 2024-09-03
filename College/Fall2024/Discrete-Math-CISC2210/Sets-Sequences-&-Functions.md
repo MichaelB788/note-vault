@@ -6,7 +6,7 @@ Sections covered:
 
 # Some Special Sets
 
-## Set Notation
+### Set Notation
 
 | Symbol   |  Meaning  |
 |--------------- | --------------- |
@@ -16,9 +16,6 @@ Sections covered:
 | $\mathbb{Q}$  | Quotient numbers (fractions) |
 | $\mathbb{R}$  | All numbers |
 | $\empty$  | Empty set |
-
-
-## Reading Set Notation
 
 ### Element-of $\epsilon$
 
@@ -89,7 +86,7 @@ $A \cup B = (x : x \epsilon A$ *OR* $x \epsilon B)$
 
 $A$ unites $B$ such that $x$ is an element of $A$ or $B$. 
 
-Unite all the elements in both sets.
+All elements in A or B
 
 ### Intersect $\cap$
 
@@ -97,7 +94,7 @@ $A \cap B = (x : x \epsilon A$ *AND* $x \epsilon B)$
 
 $A$ intersects with $B$ such that $x$ is an element of $A$ and $B$ simultaneously. 
 
-Combine all elements that are exclusively in both A and B.
+All elements in A and B
 
 ##### Example 
 ![Unions and Intersection](assets/union-intersect.png)
@@ -112,7 +109,7 @@ $A \backslash B = (x : x \epsilon A$ *and* $x !\epsilon B)$
 
 If $x$ is in $A$, but $x$ is NOT in $B$, $A$ and $B$ are relative compliments.
 
-Take all the elements that are in A and not in B.
+All elements in A that are not in B
 
 ### Symmetric Difference $\oplus$
 
@@ -120,7 +117,7 @@ $A \oplus B = (x : x \epsilon A$ *or* $x \epsilon B)$, *but not both!*
 
 $x$ is an element of $A$ or $B$, but it cannot be an element of both.
 
-Combine all the elements in A and B but leave out the elements that appear in both!
+All elements in A or B that are not in both.
 
 ##### Example 
 
@@ -150,7 +147,7 @@ set to another.
 
 ![Venn Diagram of Compliments](assets/diagramcompliments.png)
 
-### Rules off Set Operations
+### Rules of Set Operations
 
 $$
 A \cup B = B \cup A
@@ -168,22 +165,70 @@ $$
 A \backslash B \neq B \backslash A
 $$
 
-> Rules 1 to 3 are complimentary examples
+These rules are the same rules as the assosciative and complimentary examples.
 
-Further:
-
-$$
-A \cup (B \cup C) = A \cup (B \cup C)
-$$
+Furthermore:
 
 $$
-A \cap (B \cap C) = A \cap B 
+A^c \cap B^c = (A U B)^c
+$$
+
+Both expressions can be read as: All elements that are not in A and B.
+
+### Product Sets and Ordered Pairs
+
+$$
+S * T = {(s, t) : s \epsilon S, t \epsilon T}
+$$
+
+### Finite Set (Length of Set) $|A|$
+
+$$
+|\empty| = 0
+$$ 
+
+$$
+|{1, 2, ... , n}| = n : n \epsilon P
 $$
 
 $$
-A \oplus B = B \oplus A
+|U| = (|A| \cup |A^c|) \cup (|B| \cup |B^c|) \cup ...
 $$
 
+<br>
+
+# Functions
+
+Functions in discrete math are **defined of set A** with **values in set B**.
+
+Set A is considered the domain of the function and can be written as **Dom(f)** (and 
+it often is).
+
+For every x in Dom(f), f(x) is called the image of x under f. The set of all these 
+images is a subset of B called the image of f, written as **Im(f)**
+
 $$
-A \backslash B \neq B \backslash A
+Im(f) = { f(x) : x \epsilon Dom(f) }
 $$
+> Im(f) is a set of f(x) such that x is an element of Dom(f) (or set A)
+
+##### Example
+
+![functionexample](assets/functionexample.png)
+
+### Codomains
+
+Codomains are essentially a **set of images**. If we have sets A and B, we can allow 
+set B to contain an image of set A's x values, or $Im(f)$. 
+
+$$
+f : S \rightarrow T
+$$
+> This is read as "$f$ is a function with domain S and codomain T".
+
+### Maps
+
+If $f$ is a function with domain S and codomain T, we can also say that $f$ **maps** set S
+into set T
+
+![mapping](assets/mapping.png)
