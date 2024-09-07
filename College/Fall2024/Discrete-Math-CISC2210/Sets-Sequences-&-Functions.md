@@ -35,6 +35,17 @@ $(x, y) \epsilon G$
 
 ## Characteristic Fucntion $\chi A$
 
+Characteristic fucntions contain unique elements such that x meets a condition; these 
+functions behave much like piecewise functions in Algebra.
+
 $$
-\begin{array}{rcl} \\1 \mbox{for}
+\chi A = \left\{\begin{array}{rcl} 1 & if & x \epsilon A, \\
+0 & if & x \epsilon S \backslash A. 
+\end{array} \right.
 $$
+
+## Composition Functions $g(f(x))$ 
+
+$(g \circ f)(x) = g(f(x))$ for all $x \epsilon S$
+
+![Composition Function](assets/composition.png)
