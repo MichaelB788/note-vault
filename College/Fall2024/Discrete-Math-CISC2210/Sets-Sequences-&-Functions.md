@@ -1,4 +1,4 @@
-## Image $Im(f)$
+# Image $Im(f)$
 
 For every x in $Dom(f)$, $f(x)$ is called the image of x under $f$. We can put these 
 transformations together to make an **image set** $Im(f)$, **or the set of
@@ -49,3 +49,8 @@ $$
 $(g \circ f)(x) = g(f(x))$ for all $x \epsilon S$
 
 ![Composition Function](assets/composition.png)
+
+## Sum $\sum$
+
+![summation](assets/summation.png)
+
