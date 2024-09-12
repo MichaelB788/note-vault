@@ -295,6 +295,8 @@ you'll always end up with the same result.
 
 # Sequences
 
+Sequences are sets which can be infinitely large in size.
+
 ## Sum $\sum$
 
 ![summation](assets/summation.png)
