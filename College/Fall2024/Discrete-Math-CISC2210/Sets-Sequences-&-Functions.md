@@ -35,7 +35,7 @@ $(x, y) \epsilon G$
 
 ## Characteristic Fucntion $\chi A$
 
-Characteristic fucntions contain unique elements such that x meets a condition; these 
+Characteristic functions contain unique elements such that x meets a condition; these 
 functions behave much like piecewise functions in Algebra.
 
 $$
@@ -44,13 +44,75 @@ $$
 \end{array} \right.
 $$
 
+For computers in particular, characteristic functions are particularly useful, as they 
+can describe subsets of characteristic elements with bits 0 and 1.
+
 ## Composition Functions $g(f(x))$ 
 
-$(g \circ f)(x) = g(f(x))$ for all $x \epsilon S$
+We can compose two functions if we invoked a transformation such as S to T, and T to U.
+This is moreso for brevity.
+
+$$
+(g \circ f) : S \rightarrow U
+$$
+
+$$
+(g \circ f)(s) = g(f(s))
+$$
+
+#### Example
 
 ![Composition Function](assets/composition.png)
+
+### Assosciative Property of Functions
+
+Functions are assosciative:
+
+$$
+h \circ (g \circ f) = (h \circ g) \circ f
+$$
+
+This is because no matter what order you compute the function expressions,
+you'll always end up with the same result.
+
+# Sequences
 
 ## Sum $\sum$
 
 ![summation](assets/summation.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
