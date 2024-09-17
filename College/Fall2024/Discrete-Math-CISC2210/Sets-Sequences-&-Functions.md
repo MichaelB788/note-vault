@@ -10,11 +10,11 @@ Sections covered:
 
 | Symbol   |  Meaning  |
 |--------------- | --------------- |
-| $\mathbb{P}$  | Positive integers (zero exclusive) |
-| $\mathbb{N}$  | Natural numbers (zero inclusive) |
-| $\mathbb{Z}$  | Real numbers (positive, negative, or zero) |
+| $\mathbb{P}$  | Positive integers (exclusion of 0) |
+| $\mathbb{N}$  | Natural integers (inclusion of 0) |
+| $\mathbb{Z}$  | All integers (positive, negative, or zero) |
 | $\mathbb{Q}$  | Quotient numbers (fractions) |
-| $\mathbb{R}$  | All numbers |
+| $\mathbb{R}$  | All real numbers |
 | $\empty$  | Empty set |
 
 ### Element-of $\epsilon$
