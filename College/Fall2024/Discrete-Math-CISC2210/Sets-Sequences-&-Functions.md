@@ -3,6 +3,7 @@ Sections covered:
 - [1.4 Set Operations](#set-operations) 
 - [1.5 Functions](#functions) 
 - [1.6 Sequences](#sequences) 
+- [1.7 Properties of Functions](#properties-of-functions)
 
 # Some Special Sets
 
@@ -251,7 +252,7 @@ A function with domain S and codomain T may be graphed, or a subset of G, such t
 for each $x \epsilon S$ there is exactly one $y \epsilon T$ such that
 $(x, y) \epsilon G$
 
-## Characteristic Fucntion $\chi A$
+## Characteristic Function $\chi A$
 
 Characteristic functions contain unique elements such that x meets a condition; these 
 functions behave much like piecewise functions in Algebra.
@@ -295,8 +296,69 @@ you'll always end up with the same result.
 
 # Sequences
 
-Sequences are sets which can be infinitely large in size.
+Sequences are algebraic concepts such that a transformation, or $f$, is invoked on 
+an $n$ amount of elements.
+
+For example, n! is a sequence of $n * n-1 * n-2 ... 3 * 2 * 1$ 
 
 ## Sum $\sum$
 
+Another example of a sequence is summation.
+
 ![summation](assets/summation.png)
+
+# Properties of Functions
+
+Certain functions may have the following properties which make it unique in 
+some way. Consider the following.
+
+## One-to-One
+
+Every element s hits a member of T exactly once.
+
+Def: A function $f : S \rightarrow T$ is called a *one-to-one* function IF
+different elements have to got to different elements of T.
+
+$s1 != s2$, then $f(s1) != f(s2)$ 
+
+$f(s1) = f(s2)$, then $s1 = s2$ 
+
+## Onto 
+
+Every element s hits a member of T.
+
+Def: A function $f : S \rightarrow T$ is *onto* $Im(f) = T$ for all $t \epsilon T$
+such that $f(s) = T$
+
+## One-one Correspondance
+
+Every member of set S corresponds to every member of set T.
+
+Def: A function $f : S \rightarrow T$ is a *one-to-one correspondance*
+if $f$ is one-one and onto.
+
+## Inverse functions
+
+Essentially undo's the transformation of $S \rightarrow T$
+
+Def: Let $f : S \rightarrow T$ be a function. A inverse function of $f$ is
+the function $f^-1: T \rightarrow S$
+
+For all $s \epsilon S, f^-1(f(s)) = s$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
