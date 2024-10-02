@@ -18,10 +18,10 @@ Sections covered:
 | $\mathbb{R}$  | All real numbers |
 | $\empty$  | Empty set |
 
-### Element-of $\epsilon$
+### Element-of $\in$
 
 The element-of symbol is used to signify an object of a set. It can be read as "is an 
-element of." An $\epsilon$ with a strikethrough is usually the opposite, "is not an 
+element of." An $\in$ with a strikethrough is usually the opposite, "is not an 
 element of."
 
 ### General Sets and General Members of Sets
@@ -32,7 +32,7 @@ or X*).
 The **generic members** of the set, the individual elements, are denoted via lowercase
 letters (*a, b, s, or x*).
 
-For example, s $\epsilon$ S or t $\epsilon$ T. 
+For example, s $\in$ S or t $\in$ T. 
 
 ### (Improper) Subset $\subseteq$ 
 
@@ -40,7 +40,7 @@ Consider $A \subseteq B$. This can simply be read as "A is a subset of B"
 > Note: Subset-of may also be read as "is contained in".
 > Also: This symbol is an IMPROPER subset, not a PROPER subset ($\subset$).
 
-Now consider $S \subseteq T$: Since $s \epsilon S$, this implies that $s \epsilon T$.
+Now consider $S \subseteq T$: Since $s \in S$, this implies that $s \in T$.
 
 ### Power Set
 
@@ -50,7 +50,7 @@ The total size of a power set will generally be $2^n$ size.
 
 ![PowerSet](assets/PowerSet.png)
 
-### Sigma $\sum$
+### Sigma $\Sigma$
 
 Sigma sets can contain any combination of letters, numbers and symbols.
 
@@ -58,7 +58,7 @@ We could define the alphabet within $\sum$, such that
 
 $\sum = {a, b, c, d, ... , z}$
 
-### Sigma Star $\sum*$
+### Sigma Star $\Sigma^*$
 
 A "super set" of sigma, sigma star contains all combinations of a sigma set.
 
@@ -68,7 +68,7 @@ is infinite in size.
 ##### Lambda $\lambda$
 The first letter of sigma star, lambda simply represents an empty word.
 
-### Restrictions of Sigma
+### Restrictions of $\Sigma$
 
 Sigma sets are not allowed to contain elements of strings which **begin with the 
 same letter as an existing element**. 
@@ -83,7 +83,7 @@ We can allow $\sum = {a, b, c}$, however we cannot allow $\sum = {a, b, c, cd}$
 
 ### Union $\cup$
 
-$A \cup B = (x : x \epsilon A$ *OR* $x \epsilon B)$
+$A \cup B = (x : x \in A$ *OR* $x \in B)$
 
 $A$ unites $B$ such that $x$ is an element of $A$ or $B$. 
 
@@ -91,7 +91,7 @@ All elements in A or B
 
 ### Intersect $\cap$
 
-$A \cap B = (x : x \epsilon A$ *AND* $x \epsilon B)$
+$A \cap B = (x : x \in A$ *AND* $x \in B)$
 
 $A$ intersects with $B$ such that $x$ is an element of $A$ and $B$ simultaneously. 
 
@@ -106,7 +106,7 @@ All elements in A and B
 ### Relative Compliment $\backslash$
 > Relative in the sense that we are only concerned in two particular sets.
 
-$A \backslash B = (x : x \epsilon A$ *and* $x !\epsilon B)$
+$A \backslash B = (x : x \in A$ *but* $x \not\in B)$
 
 If $x$ is in $A$, but $x$ is NOT in $B$, $A$ and $B$ are relative compliments.
 
@@ -114,7 +114,7 @@ All elements in A that are not in B
 
 ### Symmetric Difference $\oplus$
 
-$A \oplus B = (x : x \epsilon A$ *or* $x \epsilon B)$, *but not both!*
+$A \oplus B = (x : x \in A$ *or* $x \in B)$, *but not both!*
 
 $x$ is an element of $A$ or $B$, but it cannot be an element of both.
 
@@ -131,7 +131,7 @@ A Universe is a combination of all elements across all sets, denoted by U.
 ### Absolute Compliment $A^c$
 > Otherwise known simply as the "compliment" of a set.
 
-$A^c = (x \epsilon U : U \backslash A)$
+$A^c = (x \in U : U \backslash A)$
 
 All the elements in universe that are not present in A.
 
@@ -171,7 +171,7 @@ These rules are the same rules as the assosciative and complimentary examples.
 Furthermore:
 
 $$
-A^c \cap B^c = (A U B)^c
+A^c \cap B^c = (A \cup B)^c
 $$
 
 Both expressions can be read as: All elements that are not in A and B.
@@ -179,7 +179,7 @@ Both expressions can be read as: All elements that are not in A and B.
 ### Product Sets and Ordered Pairs
 
 $$
-S * T = {(s, t) : s \epsilon S, t \epsilon T}
+S * T = {(s, t) : s \in S, t \in T}
 $$
 
 ### Finite Set (Length of Set) $|A|$
@@ -189,7 +189,7 @@ $$
 $$ 
 
 $$
-|{1, 2, ... , n}| = n : n \epsilon P
+|{1, 2, ... , n}| = n : n \in P
 $$
 
 $$
@@ -209,7 +209,7 @@ For every x in Dom(f), f(x) is called the image of x under f. The set of all the
 images is a subset of B called the image of f, written as **Im(f)**
 
 $$
-Im(f) = { f(x) : x \epsilon Dom(f) }
+Im(f) = { f(x) : x \in Dom(f) }
 $$
 > Im(f) is a set of f(x) such that x is an element of Dom(f) (or set A)
 
@@ -224,7 +224,7 @@ transformations together to make an **image set** $Im(f)$, **or the set of
 all values taken by the function f(x)**.
 
 $$
-Im(f) = { f(x) : x \epsilon Dom(f) }
+Im(f) = { f(x) : x \in Dom(f) }
 $$
 > Im(f) is a set of f(x) such that x is an element of Dom(f) (or set A)
 
@@ -249,17 +249,19 @@ $$
 
 A function with domain S and codomain T may be graphed, or a subset of G, such that;
 
-for each $x \epsilon S$ there is exactly one $y \epsilon T$ such that
-$(x, y) \epsilon G$
+for each $x \in S$ there is exactly one $y \in T$ such that
+$(x, y) \in G$
 
-## Characteristic Function $\chi A$
+## Characteristic Function $\chi_A$
 
-Characteristic functions contain unique elements such that x meets a condition; these 
-functions behave much like piecewise functions in Algebra.
+Characteristic functions contain unique elements. When a condition is met, the input
+will produce a particular output. 
+
+A piecewise function is a good example of a characteristic function.
 
 $$
-\chi A = \left\{\begin{array}{rcl} 1 & if & x \epsilon A, \\
-0 & if & x \epsilon S \backslash A. 
+\chi_A = \left\{\begin{array}{rcl} 1 & if & x \in A, \\
+0 & if & x \in U \backslash A. 
 \end{array} \right.
 $$
 
@@ -268,8 +270,17 @@ can describe subsets of characteristic elements with bits 0 and 1.
 
 ## Composition Functions $g(f(x))$ 
 
-We can compose two functions if we invoked a transformation such as S to T, and T to U.
-This is moreso for brevity.
+Consider following functions $f$ and $g$: 
+
+$$
+f : S \rightarrow T
+$$
+
+$$
+g : T \rightarrow U
+$$
+
+Composition of $f$ and $g$ would give us the following:
 
 $$
 (g \circ f) : S \rightarrow U
@@ -283,23 +294,21 @@ $$
 
 ![Composition Function](assets/composition.png)
 
-### Assosciative Property of Functions
+### Note: Assosciative Property of Functions
 
-Functions are assosciative:
+Functions are assosciative. This means that no matter which way you choose to
+compute a composite function, you will always end with the same result.
 
 $$
 h \circ (g \circ f) = (h \circ g) \circ f
 $$
 
-This is because no matter what order you compute the function expressions,
-you'll always end up with the same result.
-
 # Sequences
 
-Sequences are algebraic concepts such that a transformation, or $f$, is invoked on 
-an $n$ amount of elements.
+Sequences are algebraic concepts such that a transformation, $f$, is invoked on 
+$n$ amount of elements.
 
-For example, n! is a sequence of $n * n-1 * n-2 ... 3 * 2 * 1$ 
+For example, $n!$ is a sequence of $\mathbb{N}$ such that $n! = n * n-1 * n-2 ... 3 * 2 * 1$ 
 
 ## Sum $\sum$
 
@@ -316,18 +325,18 @@ some way. Consider the following.
 
 Every element s hits a member of T exactly once.
 
-Def: A function $f : S \rightarrow T$ is called a *one-to-one* function IF
-different elements have to got to different elements of T.
+Def: A function $f : S \rightarrow T$ is *one-to-one* if each element $s$
+corresponds to any $t$ value **once at most**.
 
-$s1 != s2$, then $f(s1) != f(s2)$ 
+If $s1 \neq s2$, then $f(s1) \neq f(s2)$ 
 
-$f(s1) = f(s2)$, then $s1 = s2$ 
+Else if $f(s1) = f(s2)$, then $s1 = s2$ 
 
 ## Onto 
 
 Every element s hits a member of T.
 
-Def: A function $f : S \rightarrow T$ is *onto* $Im(f) = T$ for all $t \epsilon T$
+Def: A function $f : S \rightarrow T$ is *onto* $Im(f) = T$ for all $t \in T$
 such that $f(s) = T$
 
 ## One-one Correspondance
@@ -339,26 +348,7 @@ if $f$ is one-one and onto.
 
 ## Inverse functions
 
-Essentially undo's the transformation of $S \rightarrow T$
-
 Def: Let $f : S \rightarrow T$ be a function. A inverse function of $f$ is
-the function $f^-1: T \rightarrow S$
+the function $f^{-1}: T \rightarrow S$
 
-For all $s \epsilon S, f^-1(f(s)) = s$ 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+For all $s \in S, f^{-1}(f(s)) = s$ 
