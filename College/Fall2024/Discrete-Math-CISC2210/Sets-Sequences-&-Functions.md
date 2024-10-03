@@ -9,14 +9,14 @@ Sections covered:
 
 ### Set Notation
 
-| Symbol   |  Meaning  |
-|--------------- | --------------- |
-| $\mathbb{P}$  | Positive integers (exclusion of 0) |
-| $\mathbb{N}$  | Natural integers (inclusion of 0) |
+| Symbol        | Meaning                                    |
+|---------------|--------------------------------------------|
+| $\mathbb{P}$  | Positive integers (exclusion of 0)         |
+| $\mathbb{N}$  | Natural integers (inclusion of 0)          |
 | $\mathbb{Z}$  | All integers (positive, negative, or zero) |
-| $\mathbb{Q}$  | Quotient numbers (fractions) |
-| $\mathbb{R}$  | All real numbers |
-| $\empty$  | Empty set |
+| $\mathbb{Q}$  | Quotient numbers (fractions/decimals)      |
+| $\mathbb{R}$  | All real numbers                           |
+| $\emptyset$   | Empty set                                  |
 
 ### Element-of $\in$
 
@@ -101,7 +101,7 @@ All elements in A and B
 ![Unions and Intersection](assets/union-intersect.png)
 
 > A and B are said to be **disjoint** should they have no elements in common
-> $A \cap B = \empty$
+> $A \cap B = \emptyset$
 
 ### Relative Compliment $\backslash$
 > Relative in the sense that we are only concerned in two particular sets.
@@ -185,7 +185,7 @@ $$
 ### Finite Set (Length of Set) $|A|$
 
 $$
-|\empty| = 0
+|\emptyset| = 0
 $$ 
 
 $$
