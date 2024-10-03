@@ -108,9 +108,9 @@ All elements in A and B
 
 $A \backslash B = (x : x \in A$ *but* $x \not\in B)$
 
-If $x$ is in $A$, but $x$ is NOT in $B$, $A$ and $B$ are relative compliments.
+$A$ and $B$ are relative compliments if $x$ is in $A$ but NOT in $B$.
 
-All elements in A that are not in B
+> All elements in A that are not in B
 
 ### Symmetric Difference $\oplus$
 
