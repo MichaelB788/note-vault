@@ -12,25 +12,31 @@ Topics covered:
 
 ## Symbolic Notation
 
-| Symbol        | Meaning               |
-|---------------|-----------------------|
-| $\neg$        | Negation (Not)        |
-| $\wedge$      | Conjunction (And)     |
-| $\vee$        | Alternative (Or)      |
-| $\rightarrow$ | Implication (Implies) |
+| Symbol        | Meaning                         |
+|---------------|---------------------------------|
+| $\neg$        | Negation (Not)                  |
+| $\land$       | Logical "And"                   |
+| $\lor$        | Logical "Or"                    |
+| $\implies$    | Implies                         |
+| $\equiv$      | Equivalent                      |
+| $\iff$        | Biconditional "if and only if"  |
+| $\oplus$      | Exclusive Or                    |
+| $\sim$        | Unless                          |
+
+> $\sim q \implies p$ ($p$ unless $q$) can be read as "if not $p$, then $q$."
 
 ## Converse 
 
-When we say $p \rightarrow q$, the **converse** of that proposition would be 
-$q \rightarrow p$. The two propositions have different meanings.
+When we say $p \implies q$, the **converse** of that proposition would be 
+$q \implies p$. The two propositions have different meanings.
 
 We could say that "Rainy weather implies that today is cloudy." However, we cannot say
 "Cloudy weather implies that today is raining."
 
 ## Contrapositive
 
-The proposition $\neg q \rightarrow \neg p$ is the **contrapositive** of 
-$p \rightarrow q$. In this particular case, the contrapositive is equivalent of the 
+The proposition $\neg q \implies \neg p$ is the **contrapositive** of 
+$p \implies q$. In this particular case, the contrapositive is equivalent of the 
 original proposition.
 
 We could say that "No clouds implies that it is not raining." In fact, this follows 
@@ -38,11 +44,12 @@ logically with the proposition that "rainy weather implies that today is cloudy.
 
 ## Quantifiers
 
-| Symbol      | Meaning       |
-|-------------|---------------|
-| $\forall$   | For all       |
-| $\exists$   | Exists        |
-| $\nexists$  | Doesn't exist |
+| Symbol       | Meaning                  |
+|--------------|--------------------------|
+| $\forall$    | For all                  |
+| $\exists$    | There exists             |
+| $\nexists$   | There does not exist     |
+| $\exists !$  | There exists exactly one |
 
 <br>
 
