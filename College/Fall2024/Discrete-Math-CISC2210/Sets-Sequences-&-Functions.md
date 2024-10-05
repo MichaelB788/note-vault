@@ -7,7 +7,7 @@ Sections covered:
 
 # Some Special Sets
 
-### Set Notation
+## Set Notation
 
 | Symbol        | Meaning                                    |
 |---------------|--------------------------------------------|
@@ -18,137 +18,144 @@ Sections covered:
 | $\mathbb{R}$  | All real numbers                           |
 | $\emptyset$   | Empty set                                  |
 
-### Element-of $\in$
+### General Sets and Members
 
-The element-of symbol is used to signify an object of a set. It can be read as "is an 
-element of." An $\in$ with a strikethrough is usually the opposite, "is not an 
-element of."
+Sets are denoted via capital letters, such as $A$ or $B$. They contain any 
+number of elements, or members, which make it a set.
 
-### General Sets and General Members of Sets
+Members of these respective sets, are denoted via the lowercase equivalent.
+For example, $a \in A$ and $b \in B$.
 
-**Generic sets** are denoted by a capital letter, such as (*A, B, S
-or X*).
+## Element-of $\in$
 
-The **generic members** of the set, the individual elements, are denoted via lowercase
-letters (*a, b, s, or x*).
+Signifies that an **element is in a set**, or an element of a set.
+In plain English, $\in$ can be read as "in". For example, $x \in X$ would 
+translate to "$x$ in set $X$"
 
-For example, s $\in$ S or t $\in$ T. 
+$\notin$ signifies the opposite: $x \notin A$ translates to "$x$ not in
+set $A$"
 
-### (Improper) Subset $\subseteq$ 
+## Subset $\subseteq$ 
 
-Consider $A \subseteq B$. This can simply be read as "A is a subset of B"
-> Note: Subset-of may also be read as "is contained in".
-> Also: This symbol is an IMPROPER subset, not a PROPER subset ($\subset$).
+Suppose we had the two following sets, $A$ and $B$: 
 
-Now consider $S \subseteq T$: Since $s \in S$, this implies that $s \in T$.
+$A = \{1, 2, 3\}$, and $B = \{1, 2, 3, 4\}$
 
-### Power Set
+In this case, we could say that $A \subseteq B$. This translates to "set $A$ is 
+a subset of set $B$."
 
-The set of all subsets of a set of S is a power set and can be denoted as P(S).
+This just means that set $A$ is made up of elements in a larger set $B$.
 
-The total size of a power set will generally be $2^n$ size.
+As an aside, since $A \subseteq B$, this implies that $a \in B$, because again, 
+we could see that all elements of $A$ derive from $B$
+
+## Power Set $\mathcal{P}(S)$
+
+To preface, its important to note that **sets can contain anything**, it isn't 
+exclusive to numbers: You could have a set of characters, strings, even sets 
+themselves can be elements of a set.
+
+Power sets are just that: Large sets containing smaller sets as its elements. 
+
+To put it simply, $\mathcal{P}(S)$ is a **special set** which consist **of all
+possible subsets** of a given set, $S$.
+
+$\mathcal{P}(S)$ tends to be very large due to having a size of $2^n$, where 
+$n$ is the number of elements in $S$.
+> In symbolic notation, we could simply say that $n = |S|$. <br>
+> $|S|$ just means "number of elements in $S$"
+
+### Examples from the Textbook
 
 ![PowerSet](assets/PowerSet.png)
 
-### Sigma $\Sigma$
+## Sigma $\Sigma$
 
-Sigma sets can contain any combination of letters, numbers and symbols.
+Remember, sets can contain anything.
 
-We could define the alphabet within $\sum$, such that
+$\Sigma$ is yet another special set which contains unique elements, that being
+any combination of letters, numbers and symbols.
 
-$\sum = {a, b, c, d, ... , z}$
+For example, we could define the English alphabet as the following:
 
-### Sigma Star $\Sigma^*$
-
-A "super set" of sigma, sigma star contains all combinations of a sigma set.
-
-Since there's an infinite number of ways to combine letters and symbols, sigma star
-is infinite in size.
-
-##### Lambda $\lambda$
-The first letter of sigma star, lambda simply represents an empty word.
+$\Sigma = \{a, b, c, d, ... , z\}$
 
 ### Restrictions of $\Sigma$
 
-Sigma sets are not allowed to contain elements of strings which **begin with the 
-same letter as an existing element**. 
+Sigma sets are not allowed to contain more than one word which begins with the
+same letter. 
 
-We can allow $\sum = {a, b, c}$, however we cannot allow $\sum = {a, b, c, cd}$
+For example, we can allow $\Sigma = \{a, b, c\}$
+
+However, we cannot allow $\Sigma = \{a, b, c, cd\}$, because $c$ and $cd$ begin 
+with the same letter.
+
+## Sigma Star $\Sigma^*$
+
+In short, $\Sigma^*$ consists of all the possible combinations of symbols in
+$\Sigma$. The elements of $\Sigma^*$ are commonly denoted as "words," and 
+$\Sigma^*$ itself is denoted as a "language." 
+
+For example, suppose we had the alphabet 
+
+$\Sigma = {a, b, c, d, ... , z}$
+
+The language, or $\Sigma^*$, derived from the alphabet contains infinitely many
+words. For example, $\{cat\} \in \Sigma^*$. 
+> Generally, most words in a language aren't coherent words <br>
+> $\{ababacdcd\} \in \Sigma^*$ is true, for example.
+
+An easy way of thinking about $\Sigma^*$ is $\mathcal{P}(\Sigma)$, or the power 
+set of $\Sigma$. This is because power sets and $\Sigma^*$ behave quite similarly
+in practice.
+
+### Lambda $\lambda$
+
+The first word of any language is always $\lambda$, which simply represents an
+empty word.
+
+$\Sigma^* = \{\lambda, ...\}$
 
 <br>
 
-## Set Operations
+# Set Operations
 
-> $x$ may be any member of sets $A$ and $B$
+| Symbol       | Notation              | Meaning                                       |
+| ------------ | --------------------- | --------------------------------------------- |
+| $\cup$       | Union                 | All elements in A **or** B                    |
+| $\cap$       | Intersection          | All elements in A **and** B                   |
+| $\backslash$ | Relative Compliment   | All elements in A **that are not** B          |
+| $\oplus$     | Symemetric Difference | All elements in A **and** B, **but not both** |
 
-### Union $\cup$
+## Universe $U$
 
-$A \cup B = (x : x \in A$ *OR* $x \in B)$
+The universe encompasses everthing. For example, $U = \Sigma^*$ or $U = \mathbb{R}$.
 
-$A$ unites $B$ such that $x$ is an element of $A$ or $B$. 
+All sets are inherently a subset of the universe.
 
-All elements in A or B
+## Absolute Compliment $A^c$
 
-### Intersect $\cap$
+The formal definition is as follows:
 
-$A \cap B = (x : x \in A$ *AND* $x \in B)$
+$A^c = \{ x \in U : U \backslash A \}$
 
-$A$ intersects with $B$ such that $x$ is an element of $A$ and $B$ simultaneously. 
+In other words, the **compliment** of a set $A$ is a set containing **everything 
+outside of $A$**.
 
-All elements in A and B
-
-##### Example 
-![Unions and Intersection](assets/union-intersect.png)
-
-> A and B are said to be **disjoint** should they have no elements in common
-> $A \cap B = \emptyset$
-
-### Relative Compliment $\backslash$
-> Relative in the sense that we are only concerned in two particular sets.
-
-$A \backslash B = (x : x \in A$ *but* $x \not\in B)$
-
-$A$ and $B$ are relative compliments if $x$ is in $A$ but NOT in $B$.
-
-> All elements in A that are not in B
-
-### Symmetric Difference $\oplus$
-
-$A \oplus B = (x : x \in A$ *or* $x \in B)$, *but not both!*
-
-$x$ is an element of $A$ or $B$, but it cannot be an element of both.
-
-All elements in A or B that are not in both.
-
-##### Example 
-
-![Symemetric Difference and Reletive Compliments](assets/compli-diff.png)
-
-### Universe $U$
-
-A Universe is a combination of all elements across all sets, denoted by U.
-
-### Absolute Compliment $A^c$
-> Otherwise known simply as the "compliment" of a set.
-
-$A^c = (x \in U : U \backslash A)$
-
-All the elements in universe that are not present in A.
-
-### Venn Diagrams
+## Venn Diagrams
 
 It is can be useful to have a visual representation of how set operations relate one
 set to another.
 
-##### Example (a)
+##### Union, Intersection, Relative Compliment, and Symemetric Difference
 
 ![Venn Diagram of Set Operations](assets/venndiagram.png)
 
-##### Example (b)
+##### Universe and Relative Compliment
 
 ![Venn Diagram of Compliments](assets/diagramcompliments.png)
 
-### Rules of Set Operations
+## Rules of Set Operations
 
 $$
 A \cup B = B \cup A
@@ -166,7 +173,8 @@ $$
 A \backslash B \neq B \backslash A
 $$
 
-These rules are the same rules as the assosciative and complimentary examples.
+For the most part, set operations behave much like arithmetic operations; union, 
+intersection, and exclusive or (symemetric difference) follow commutative properties.
 
 Furthermore:
 
@@ -174,15 +182,18 @@ $$
 A^c \cap B^c = (A \cup B)^c
 $$
 
-Both expressions can be read as: All elements that are not in A and B.
+## Product Sets and Ordered Pairs
 
-### Product Sets and Ordered Pairs
+If we have two sets $X$ and $Y$, we can conjuct the two sets to create ordered pairs 
+of their respective elements using the $*$ symbol.
 
-$$
-S * T = {(s, t) : s \in S, t \in T}
-$$
+$X * Y = \{(x, y) : x \in X, y \in Y\}$
 
-### Finite Set (Length of Set) $|A|$
+$X * Y$ is a set populated by ordered pairs of the form $(x, y)$.
+
+## Finite Set $|A|$
+
+Finite sets simply predefine the number of elements in a given set.
 
 $$
 |\emptyset| = 0
@@ -200,64 +211,89 @@ $$
 
 # Functions
 
-Functions in discrete math are **defined of set A** with **values in set B**.
+Functions are **defined of elements in set A** with the output **lying in set B**.
 
-Set A is considered the domain of the function and can be written as **Dom(f)** (and 
-it often is).
+Basically, $f$ transform set $A$ to become set $B$. Formally, this relationship is 
+written as:
 
-For every x in Dom(f), f(x) is called the image of x under f. The set of all these 
-images is a subset of B called the image of f, written as **Im(f)**
+$f: A \rightarrow B$
 
-$$
-Im(f) = { f(x) : x \in Dom(f) }
-$$
-> Im(f) is a set of f(x) such that x is an element of Dom(f) (or set A)
+## Domain $Dom(f)$
 
-##### Example
+In mathematics, **the domain is known simply as the input**.
 
-![functionexample](assets/functionexample.png)
+$Dom(f)$, or the domain of a function, is whatever set is being **targeted**.
+
+Suppose we had the function $f: A \rightarrow B$. Since set $A$ is being targeted 
+by $f$, set $A$ is our input, a.k.a, our domain.
+
+$f: A \rightarrow B \implies Dom(f) = A$
+
+> Since $f$ is acting upon $A$ to output $B$, this implies ($\implies$) $A$ is our
+input. 
 
 ## Image $Im(f)$
 
-For every x in $Dom(f)$, $f(x)$ is called the image of x under $f$. We can put these 
-transformations together to make an **image set** $Im(f)$, **or the set of
-all values taken by the function f(x)**.
+We understand that the input we feed to a function is its domain, but what about the 
+output? Simple, **the output of a function is known as the image**.
 
-$$
-Im(f) = { f(x) : x \in Dom(f) }
-$$
-> Im(f) is a set of f(x) such that x is an element of Dom(f) (or set A)
+$Im(f)$ is just another special set like $Dom(f)$, except **it's populated with all 
+the output values derived from the input values**.
 
-### Map
+Symbolically, this would be represented as $f(x)$ values.
 
-Sometimes, functions are refered to as **maps**. This is because the behavior of a 
-function $f$ **maps** S into T.
+The formal definition of an image set is as follows:
 
-![mapping](assets/mapping.png)
+$Im(f) = \{ f(x) : x \in Dom(f) \}$
 
 ## Codomain
 
-Codomains are a **set of images which derive from S after a transformation of $f$**.
-In other words, they are the output after a transformation of $S$
+Codomains are easy to confuse with $Im(f)$, though **it's important to note that they
+are not the same**. In fact, $Im(f) \subset Cod(f)$.
 
-$$
-f : S \rightarrow T
-$$
-> This is read as "$f$ is a function with domain S and codomain T".
+Codomains are sets **containing any *POSSIBLE* outputs which derive from the codomain**.
+
+$Im(f)$ only consists of output corresponding to whatever output we give to $f$, but 
+there are far more possible output values to $f$ than what we give it.
+
+$f: A \rightarrow B \implies Cod(f) = B$
+> Since $f$ is acting upon $A$ to output $B$, this implies that all of our output lies
+in $B$. 
+
+![Relationship Between the Domain, Image, and the Codomain](assets/DomainImageCodomain.png)
+
+## Maps
+
+Consider $f: S \rightarrow T$
+
+Because functions produce an output following a given input, this means that we are 
+essentially "mapping" elements of $S$ onto $T$.
+
+The following diagram is a great example of maps, since they are primarily visual 
+tools, much like graphs.
+
+![mapping](assets/mapping.png)
 
 ### Graph $G$
 
-A function with domain S and codomain T may be graphed, or a subset of G, such that;
+A function with domain X and codomain Y may be graphed, or a subset of G.
 
-for each $x \in S$ there is exactly one $y \in T$ such that
-$(x, y) \in G$
+Consider the following product set and function:
+
+$f: X \rightarrow Y$
+
+$X*Y = \{(x, y) : x \in \mathbb{N}, y \in \mathbb{N} \}$ 
+
+For each $x \in X$ there is exactly one $y \in Y$ such that $(x, y) \in G$.
+
+$X*Y \subset G$
 
 ## Characteristic Function $\chi_A$
 
-Characteristic functions contain unique elements. When a condition is met, the input
-will produce a particular output. 
+Characteristic functions produce a given output upon meeting a certain condition.
+They are always denoted as $\chi_A$.
 
-A piecewise function is a good example of a characteristic function.
+Think of piecewise functions, which in of themselves are characteristic functions.
 
 $$
 \chi_A = \left\{\begin{array}{rcl} 1 & if & x \in A, \\
@@ -265,32 +301,20 @@ $$
 \end{array} \right.
 $$
 
-For computers in particular, characteristic functions are particularly useful, as they 
-can describe subsets of characteristic elements with bits 0 and 1.
+## Composition Functions $g \circ f(x)$ 
 
-## Composition Functions $g(f(x))$ 
+Not all function need be the same. We could always declare a function $f$ and 
+another function $g$.
 
-Consider following functions $f$ and $g$: 
+In some cases, we may want to combine the two. Consider the following functions:
 
-$$
-f : S \rightarrow T
-$$
+$f : S \rightarrow T, \ g : T \rightarrow U$
 
-$$
-g : T \rightarrow U
-$$
+If we wanted to compose $f$ and $g$, we would get the following:
 
-Composition of $f$ and $g$ would give us the following:
+$(g \circ f) : S \rightarrow U$
 
-$$
-(g \circ f) : S \rightarrow U
-$$
-
-$$
-(g \circ f)(s) = g(f(s))
-$$
-
-#### Example
+#### Example from the Textbook
 
 ![Composition Function](assets/composition.png)
 
@@ -303,12 +327,16 @@ $$
 h \circ (g \circ f) = (h \circ g) \circ f
 $$
 
+<br>
+
 # Sequences
 
 Sequences are algebraic concepts such that a transformation, $f$, is invoked on 
 $n$ amount of elements.
 
-For example, $n!$ is a sequence of $\mathbb{N}$ such that $n! = n * n-1 * n-2 ... 3 * 2 * 1$ 
+For example, $n!$ is a sequence of $\mathbb{N}$ such that
+
+$n! = n * n-1 * n-2 ... 3 * 2 * 1$ 
 
 ## Sum $\sum$
 
@@ -316,10 +344,9 @@ Another example of a sequence is summation.
 
 ![summation](assets/summation.png)
 
-# Properties of Functions
+<br>
 
-Certain functions may have the following properties which make it unique in 
-some way. Consider the following.
+# Properties of Functions
 
 ## One-to-One
 
@@ -346,7 +373,7 @@ Every member of set S corresponds to every member of set T.
 Def: A function $f : S \rightarrow T$ is a *one-to-one correspondance*
 if $f$ is one-one and onto.
 
-## Inverse functions
+## Inverse Functions
 
 Def: Let $f : S \rightarrow T$ be a function. A inverse function of $f$ is
 the function $f^{-1}: T \rightarrow S$
